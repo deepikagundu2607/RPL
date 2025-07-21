@@ -1,0 +1,11 @@
+/*   10. Declaring String Object and converting String Literal to String Object
+   */
+
+
+fn main() {
+    let string_obj: String = String::from("Hello, Rust!");
+    println!("String Object: {}", string_obj);
+    let string_literal = "Hello, World!"; 
+    let converted_string = string_literal.to_string();
+    println!("Converted String Object: {}", converted_string);
+}

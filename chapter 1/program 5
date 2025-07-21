@@ -1,0 +1,11 @@
+/*   5. Write a program to implement the following
+a. Implicit type declaration
+b. Explicit type declaration   */
+
+
+fn main() {
+    let implicit_var = 42;  
+    println!("Implicit variable: {}", implicit_var);
+    let explicit_var: f64 = 3.1415; 
+    println!("Explicit variable: {}", explicit_var);
+}

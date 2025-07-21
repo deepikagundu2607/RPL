@@ -1,0 +1,15 @@
+/*   9. Write a program to create different types of constants print it in the output   */
+
+
+fn main() {
+    const MY_INT: i32 = 10;
+    const MY_FLOAT: f64 = 3.1415;
+    const IS_ACTIVE: bool = true;
+    const GRADE: char = 'A';
+    const GREETING: &str = "Hello, Rust!";
+    println!("Integer constant: {}", MY_INT);
+    println!("Float constant: {}", MY_FLOAT);
+    println!("Boolean constant: {}", IS_ACTIVE);
+    println!("Character constant: {}", GRADE);
+    println!("String constant: {}", GREETING);
+}

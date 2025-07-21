@@ -1,0 +1,17 @@
+/*   4. Write a program to implement the Scope and Shadowing   */
+
+
+fn main() {
+    let x = 5;
+    println!("Outer x = {}", x);
+    {
+        let x = 10;
+        println!("Inner x = {}", x);
+        {
+            let x = 15; 
+            println!("Nested inner x = {}", x);
+        }
+        println!("Back to inner x = {}", x);
+    }
+    println!("Back to outer x = {}", x);
+}
