@@ -1,0 +1,23 @@
+/*   2. Write a program to implement Borrowing and Dereferencing Operators   */
+
+
+fn main() {
+    let x = 5;
+    let y = &x;
+    
+    println!("x = {}, y = {}", x, y);
+    println!("Dereferenced y = {}", *y);
+
+    let mut z = 10;
+    let w = &mut z;
+    
+    *w += 5;
+    println!("z after modification = {}", z);
+
+    let result = get_reference(&x);
+    println!("Reference from function: {}", result);
+}
+
+fn get_reference(val: &i32) -> &i32 {
+    val
+}

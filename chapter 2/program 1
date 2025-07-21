@@ -1,0 +1,17 @@
+/*   1. Write a program to implement Type Casting Operator.   */
+
+
+fn main() {
+    let integer: i32 = 10;
+    let float: f64 = integer as f64; 
+    println!("Integer {} cast to float: {}", integer, float);
+    let pi: f64 = 3.14159;
+    let rounded: i32 = pi as i32; 
+    println!("Float {} cast to integer: {}", pi, rounded);
+    let large_number: i64 = 100000;
+    let smaller_number: i32 = large_number as i32;
+    println!("Large i64 {} cast to smaller i32: {}", large_number, smaller_number);
+    let character: char = 'A';
+    let ascii_value: u8 = character as u8; 
+    println!("Character '{}' cast to ASCII value: {}", character, ascii_value);
+}
