@@ -1,0 +1,8 @@
+//Write a program to Match a pattern using If Let Expression.
+
+let some_number = Some(7);
+if let Some(x) = some_number {
+ println!("Matched: {}", x);
+} else {
+ println!("No match");
+}

@@ -1,0 +1,43 @@
+//Write a program to make a calculator using Match Expression
+
+use std::io;
+
+fn main() {
+    println!("Simple Rust Calculator");
+
+    println!("Enter the first number:");
+    let mut num1_str = String::new();
+    io::stdin().read_line(&mut num1_str).expect("Failed to read input");
+    let num1: f64 = num1_str.trim().parse().expect("Invalid number");
+
+   
+    println!("Enter the operator (+, -, *, /):");
+    let mut operator_str = String::new();
+    io::stdin().read_line(&mut operator_str).expect("Failed to read input");
+    let operator = operator_str.trim().chars().next().expect("No operator entered");
+
+    println!("Enter the second number:");
+    let mut num2_str = String::new();
+    io::stdin().read_line(&mut num2_str).expect("Failed to read input");
+    let num2: f64 = num2_str.trim().parse().expect("Invalid number");
+
+    let result = match operator {
+        '+' => num1 + num2,
+        '-' => num1 - num2,
+        '*' => num1 * num2,
+        '/' => {
+            if num2 != 0.0 {
+                num1 / num2
+            } else {
+                println!("Error: Division by zero!");
+                return; 
+            }
+        },
+        _ => {
+            println!("Error: Invalid operator!");
+            return; 
+        }
+    };
+
+    println!("Result: {}", result);
+}
